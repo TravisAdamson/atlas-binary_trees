@@ -2,7 +2,7 @@
 
 int given_tree_height(const binary_tree_t *tree);
 int bottom_value(const binary_tree_t *tree);
-int is_bst(const binary_tree_t *tree, int n);
+int tree_is_bst(const binary_tree_t *tree, int n);
 int top_value(const binary_tree_t *tree);
 
 /**
@@ -60,7 +60,7 @@ int given_tree_height(const binary_tree_t *tree)
  * @n:
  * Return: 1 if BST, 0 if not
  */
-int is_bst(const binary_tree_t *tree, int n)
+int tree_is_bst(const binary_tree_t *tree, int n)
 {
 	if (!tree)
 		return (1);
