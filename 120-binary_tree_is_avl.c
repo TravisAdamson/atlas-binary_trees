@@ -93,8 +93,8 @@ int top_value(const binary_tree_t *tree)
 
 	if (!tree)
 		return (INT_MIN);
-	left = max_value(tree->left);
-	right = max_value(tree->right);
+	left = top_value(tree->left);
+	right = top_value(tree->right);
 
 	if (left > right)
 		top = left;
@@ -118,8 +118,8 @@ int bottom_value(const binary_tree_t *tree)
 
 	if (!tree)
 		return (INT_MAX);
-	left = min_value(tree->left);
-	right = min_value(tree->right);
+	left = bottom_value(tree->left);
+	right = bottom_value(tree->right);
 
 	if (left < right)
 		bottom = left;
