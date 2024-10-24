@@ -75,9 +75,9 @@ int tree_is_bst(const binary_tree_t *tree, int n)
 			tree->right && tree->right->n > tree->parent->n)))
 		return (0);
 
-	if (tree->left && (n == tree->left->n || !is_bst(tree->left, n)))
+	if (tree->left && (n == tree->left->n || !tree_is_bst(tree->left, n)))
 		return (0);
-	if (tree->right && (n == tree->right->n || !is_bst(tree->right, n)))
+	if (tree->right && (n == tree->right->n || !tree_is_bst(tree->right, n)))
 		return (0);
 	return (1);
 }
